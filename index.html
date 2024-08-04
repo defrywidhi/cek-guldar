@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perkiraan Hasil Kesehatan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-sm">
+        <h1 class="text-2xl font-bold mb-6 text-center">Perkiraan Hasil Kesehatan</h1>
+        <div class="mb-4">
+            <label for="cholesterol" class="block text-gray-700">Total Kolesterol (mg/dL):</label>
+            <input type="number" id="cholesterol" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Masukkan nilai kolesterol">
+        </div>
+        <div class="mb-4">
+            <label for="glucoseType" class="block text-gray-700">Jenis Gula Darah:</label>
+            <select id="glucoseType" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                <option value="fasting">Puasa</option>
+                <option value="afterMeal">2 Jam Setelah Makan</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="glucose" class="block text-gray-700">Gula Darah (mg/dL):</label>
+            <input type="number" id="glucose" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Masukkan nilai gula darah">
+        </div>
+        <div class="mb-4">
+            <label for="uricAcid" class="block text-gray-700">Asam Urat (mg/dL):</label>
+            <input type="number" id="uricAcid" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Masukkan nilai asam urat">
+        </div>
+        <div class="mb-4">
+            <label for="gender" class="block text-gray-700">Jenis Kelamin:</label>
+            <select id="gender" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                <option value="male">Pria</option>
+                <option value="female">Wanita</option>
+            </select>
+        </div>
+        <button onclick="calculateHealth()" class="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700">Hitung</button>
+        <div class="result mt-6" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
